@@ -293,9 +293,8 @@ if __name__ == '__main__':
                  '200200', '200300', '200301', '200302', '200303', '200304', '200400', '220000', '220100', '220101',
                  '220102', '220103', '220104', '220105', '220106', '220107', '220200', '220201', '220202', '220203',
                  '220204', '220205', '970000', '990000', '991000', '991001', '991400', '991401', '991500']
-        types = ['010000', '010100', '010101',]
         for t in types:
-            url_amap='http://restapi.amap.com/v3/place/text?key={}&types={}'.format(random.choice(['430d4e77b06ae18730441ab347ffdb19','e09b6fa629a9786aedd504f545b78353','5633fea6117930348ebd519be20e0f72','3109e74564f3e9d4abb9d16962138299','83990a643e3922c90b05bf6822aebe63','11ac0e29a710b95ff942cb68471bef7e','f9460e680fca487e94af9464e920f109','eb4a4feb0df6e694c64523f8bfa49186','d8ae49230da64448bfcbd1ce9538c695']),t) + '&city={}'.format(city) + '&citylimit=true&children=1&radius=50000&offset=20&page=page_index&extensions=all'
+            url_amap='http://restapi.amap.com/v3/place/text?key={}&types={}'.format(random.choice(['','']),t) + '&city={}'.format(city) + '&citylimit=true&children=1&radius=50000&offset=20&page=page_index&extensions=all'
             page_size = 20
             page_index = r'page=1'
             global total_record
